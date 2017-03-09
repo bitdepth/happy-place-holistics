@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{color:#444;}
+
+.altTxt {font-family:Georgia, "Times New Roman", Times, serif}
+
+.xxl{font-size:34px;}
+.large{font-size:22px;}
+.medium{font-size:18px;}
+
+.contactTop{color:#39b54a; font-weight:bold; position:relative; }
+.contactTop span{display:block; padding-bottom:10px; padding-right:43px;}
+
+a:link {color:#39b54a;}      /* unvisited link */
+a:visited {color:#39b54a;}  /* visited link */
+a:hover {color:#39b54a;}  /* mouse over link */
+a:active {color:#39b54a;}  /* selected link */
+
+
+.logo img{display:block; margin:0 auto;}
+
+@media (min-width: 600px){
+	.logo{position:relative; width:179px; height:128px;}
+	.logo img{position:absolute; top:10px; left:-30px;}
+}
+
+.ie .logo{position:relative; width:179px; height:128px;}
+.ie .logo img{position:absolute; top:10px; left:-30px;}
+
+.homePuff{border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px; width:105px; height:105px;}
+.puffTreatment{background:url(../../img/home/treatment.jpg);}
+.puffServices{background:url(../../img/home/services.jpg);}
+.puffBlog{background:url(../../img/home/blog.jpg);}
+.puffContact{background:url(../../img/home/contact.jpg);}
+
+.servicePuff{border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px; width:192px; height:263px;}
+
+.puffTowels{background:url(../../img/services//towels.jpg);}
+.puffCucumber{background:url(../../img/services/cucumber.jpg);}
+.puffBed{background:url(../../img/services/massage_bed.jpg);}
+
+.biogPuff{border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px; width:612px; height:451px;}
+
+.puffClaire{background:url(../../img/biog/claire_biog.jpg); margin:0 20px 20px 0;}
+
+
+/* Module Skin */
+.cheerful{background-color:#ffed00; border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px;} 
+.happy .hd h3{padding-bottom:10px;}
+
+.photos li{
+	position: relative;
+	float: left;
+	display: block;
+	padding-bottom: 10px;
+}
+.photos li a {
+display: block;
+float: left;
+padding-right: 10px;
+}
+
+.problems li {color:#39b54a; font-size:22px; text-transform:uppercase; line-height:34px; text-align:center;}
+
+.feedback {color:#1a171b; min-height:318px; height:318px!important; height:auto;}
+.review{font-size:16px; padding:20px 20px 10px 20px; font-style:italic;}
+.author{padding:0 20px 20px; font-weight:bold; text-align:right;}
+
+.footer{margin:40px 0; border-top:1px solid #ccc;}
+
+.facebook_link{position:absolute; right:0; top:30px;}
+
+.serviceDesc p{padding:0 10px;}
+.serviceDesc img{padding:0 10px 10px 0;}
+
+#treatments {margin-bottom:20px;}
+#treatments li{min-height:238px; height:238px!important; height:auto;}
+.prices{font-size:14px; font-weight:bold;}
+
+
+

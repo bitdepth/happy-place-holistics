@@ -1,0 +1,45 @@
+/* **************** TEMPLATE ***************** */
+/* ====== Page Head, Body, and Foot ====== */
+body{_text-align:center;}/* IE5.5 */
+.main{display:table-cell;*display:block;width:auto;}
+.body,.main{*zoom:1;}
+.body:after,.main:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.page{margin:0 auto;width:950px;_text-align:left;} /* wraps other template elems to set width */ /* text-align IE5.5 */
+.head{position:relative;}
+/* "old school" and "liquid" extend page to allow for different page widths */
+.oldSchool{width:750px;}
+.gs960{width:auto;} /* mobile first */
+.liquid{width:auto;margin:0;}
+/* ====== Columns ====== */
+.leftCol{float:left;width:250px;_margin-right:-3px;}
+.rightCol{width:auto; margin:0;} /* mobile first */
+/* extend columns to allow for common column widths */
+.gMail{width:160px;}
+.gCal{width:180px;}
+.yahoo{width:240px;}
+.myYahoo{width:300px;}
+.xtRightCol{width:auto;}/* mobile first */
+
+/*.foot{padding:20px 0;}*/
+.footInner{margin:0 10px;}/* mobile first */
+.footPuffs{margin-top:25px;}
+.footLinks{margin-top:40px;}
+
+
+@media (min-width: 600px) {
+	
+	.gs960{width:928px;}
+	.rightCol{float:right;width:300px;_margin-left:-3px;}
+	.xtRightCol{width:320px;}
+	
+	.footInner{width:920px; margin:0 auto;}
+	
+}
+
+/* override for IE 6/7/8 because they don't support media queries */
+
+.ie .gs960{width:928px;}
+.ie .rightCol{float:right;width:300px;_margin-left:-3px;}
+.ie .xtRightCol{width:320px;}
+
+.ie .footInner{width:920px; margin:0 auto;}

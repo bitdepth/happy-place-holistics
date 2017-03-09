@@ -1,0 +1,35 @@
+/*.moforms{font:12px "Myriad Pro","Segoe UI",Helvetica, Arial, sans-serif;}*/
+/*.moforms ul{padding:0; margin:0;}*/
+.moforms li{list-style:none;/*padding:5px 0;*/ margin:0 0 10px 0;}
+.moforms li.section{border-bottom:10px solid #dedede;}
+.moforms li.section h3{color:#444; font:16px Arial, Helvetica, sans-serif; font-weight:bold; margin:10px 0 5px 0;}
+.moforms label.desc{display:block; font-weight:bold; margin:0 0 2px 0;}
+.moforms label.chr{margin:0 0 8px 0;} /* extra margin for labels above radio or checkboxes */
+
+.moforms input, .moforms select{padding:1px 0; margin-right:10px;}
+
+.moforms input.full{width:100%;}
+
+
+
+.moforms .radio, .moforms .check{padding:2px 0;}
+.moforms .radio input{margin:0; vertical-align:top;}
+.moforms .radio label{margin:0 10px 0 5px;}
+.moforms span.vert{display:block;}
+
+.moforms .check input{margin:0; vertical-align:top;}
+.moforms .check label{margin:0 10px 0 5px;}
+
+.moforms .meta{font-size:11px; color:#ccc; display:block;}
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css ; */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+ 
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+
+

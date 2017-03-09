@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glasgow | Massage Therapy | Happy Place Holistics | Bloh=g</title>
+    <!--<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="http://getbootstrap.com/assets/css/docs.min.css">-->
+    
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/libraries.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/template.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/grids.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/content.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/mod.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/forms.960.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/happyplace.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/development/colorbox.css" media="screen" />
+    
+    
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0px; padding: 0px }
+        #map_canvas { width:320px; height:240px;}
+    </style>
+</head>
+<body>
+<div id="header" class="line">
+    <div class="unit size1of5">
+        <div class="logo"><img src="./assets/img/hp_logo.png" alt="Happy Place Holistics Logo" width="179" height="178" /> </div>
+    </div>
+    <div class="unit size4of5 txtR contactTop">
+        <span class="mob altTxt xxl">07809 772 993</span>
+        <span class="email altTxt">info@happyplaceholistics.co.uk</span>
+
+        <a class="facebook_link" rel="external" href="http://www.facebook.com/pages/Happy-Place-Holistics/151850661523618" target="_blank"><img src="./assets/img/facebook_icon.png" /></a>
+
+    </div>
+</div>
+<ul class="nav line">
+
+    <li class="first"><a href="/">Home</a><span class="current"></span></li>
+    <li><a href="/treatment-prices">Treatment/Prices</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/biog">Biog</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/special-offers">Special Offers</a></li>
+</ul>
+
+<div id="main_img" class="line" style="margin-bottom:20px;">
+    <img src="./assets/img/main_biog.jpg" alt="Face Massage" class="flex"/>
+</div>
+
+<div class="line">
+
+    <div class="unit size1of3">
+        <img src="./assets/img/biog/biog_claire.jpg" alt="Claire Heavenor" class="flex"/>
+    </div>
+
+
+    <div class="unit size1of3">
+        <p><strong>My personal vision is to use the power of touch to empower people on their journey toward
+            vitality, health and wellness.</strong></p>
+
+        <p>I am a trained holistic therapist offering massage (Swedish, Thai, acupressure, neuromuscular),
+            aromatherapy, reflexology, holistic facials, relaxation and non medical nutrition advice. I trained with
+            the UK-renowned holistic department at Cardonald College, Glasgow. I represented Cardonald College in a
+            UK skills competition in aromatherapy massage where I won second place in the Scottish/North England
+            regional final. I have also trained at the San Francisco School of Massage.</p>
+
+        <p>I am passionate about body work and I take a great deal of pleasure in delivering great treatments and
+            helping clients feel good about themselves.</p>
+
+    </div>
+
+
+    <div class="unit size1of3">
+        <p>Taking a holistic approach means we try and achieve balance of mind, body and soul. We all have times and
+            areas of our lives which carry stress for us. This can be manifested in many different ways through our
+            bodies.</p>
+
+        <p>I work with clients to try and facilitate their optimum health and vitality - looking into all elements
+            of their life and lifestyle before tailoring a bespoke treatment plan for them. In addition to the
+            hands-on bodywork I can offer clients advice on stretching, exercises, nutrition, relaxation techniques
+            and aromatherapy products to use at home</p>
+
+        <p>When I'm not giving treatments you will likely find me on my bike, my snowboard, my drum kit or at a
+            festival somewhere.</p>
+    </div>
+
+
+</div>
+
+<div class="page gs960">
+
+    <div class="footer">
+        <p class="txtR">&copy; Happy Place Holistics 2017 / Big thanks to <a href="mailto:karen@designshiny.co.uk">Design Shiny</a>, <a href="http://18rabbit.co.uk" target="_blank">18 Rabbit Photography</a> and <a href="mailto:colin@bitdepth.co.uk">Bitdepth web design</a></p>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="http://happyplaceholistics.co.uk/assets/js/development/jquery-1.4.4.js"></script><script type="text/javascript" src="http://happyplaceholistics.co.uk/assets/js/development/jquery.colorbox.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script>
+
+    var happyPlace = happyPlace || {};
+
+
+    $(document).ready(function(){
+        $("a[rel='colorbox']").colorbox();
+
+        if($("#map_canvas").length > 0){
+            happyPlace.initMap = (function(){
+
+                var latlng = new google.maps.LatLng(55.841129, -4.281736);
+                var myOptions = {
+                    zoom: 15,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+                var marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map,
+                    title:"Happy Place!"
+                });
+            }());
+        }
+
+
+        $.ajax({
+            url: "/assets/data/feedback.js",
+            success: function(data){
+                data = $.parseJSON(data);
+                var max = 4;
+                setInterval(function(){
+                    r = Math.floor(Math.random()*max+1);
+
+                    $("#testimonials").fadeOut("slow", function(){
+                        $("p.review").html(data[r].review);
+                        $("p.author").html(data[r].author);
+                    });
+
+                    $("#testimonials").fadeIn();
+
+                }, 15000);
+            }
+        });
+
+
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21946615-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script></body>
+</html>

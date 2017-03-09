@@ -1,0 +1,345 @@
+body{font-family:"Myriad Pro","Segoe UI",Helvetica, Arial, sans-serif;}
+/* **************** CONTENT OBJECTS ***************** */
+/* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote {padding:10px;}
+h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
+pre{margin: 10px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+/* ====== Elements ====== */
+img{display:block;}
+em{font-style: italic; white-space:normal;}
+strong{font-weight:bold;}
+hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
+code{color:#0B8C8F;}
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1{font-size:153.9%; font-weight:normal; font-style: normal; color:#000;}   /* renders 20px */
+h2, .h2{font-size:138.5%; font-weight:normal; font-style: normal; color:#000;}   /* renders 18px */
+h3, .h3{font-size:123.1%; font-weight:normal; font-style: normal; color:#000;}   /* renders 16px */
+h4, .h4{font-size:108%; font-weight:normal; font-style: normal; color: #000;}       /* renders 14px */
+h5, .h5{font-size:93%; font-weight:normal; font-style: normal; color:#000;}      /* renders 12px */
+h6, .h6{font-size:85%; font-weight:normal; font-style: italic; color:#000;}         /* renders 11px */
+/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
+.category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+.category a{color: #333;}
+.important a{font-weight:bold;}
+/* links */
+a {color: #2c4460; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+a:visited { color:#005a9c; }
+.lgLink{font-size:108%;}
+
+/* ====== Lists ======*/
+/* numbered list */
+ol.simpleList li{list-style-type: decimal; margin-left:40px;}
+/* standard list */
+ul.simpleList li{list-style-type:disc; margin-left:40px;}
+/* ====== Tables ====== */
+.data{padding: 20px; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%;border:1px solid #AE0345;}
+th, td{vertical-align:top;border:1px solid #AE0345;}
+.txtC, .data .txtC td, .data .txtC th{text-align:center;}
+.txtL, .data .txtL td, .data .txtL th{text-align:left;}
+.txtR, .data .txtR td, .data .txtR th{text-align:right;}
+.txtT, .data .txtT td, .data .txtT th{vertical-align:top;}
+.txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
+.txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
+.data thead tr{background-color: #fff0f8;}
+.data th{color: #000; font-weight:bold}
+/* specification table - extends data table */
+.spec{padding:10px;}
+.spec table{border-top: 1px solid #e2e2e2; border-bottom-color:#fff; border-left:none; border-right:none;}
+.spec th, .spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
+.spec .odd, .spec .even{background-color: #fff;}
+/* ====== blockquote ====== */
+cite{display:block; text-align:right; padding-top: 10px;}
+/* ====== callout ====== */
+.callout{font-size:189%;color:#999999; font-style:italic;}
+.callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%;}
+.callout span.quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold;}
+.callout span.quotLast{vertical-align:middle;}
+/* ====== image treatments (get more from jason santa maria) ====== */
+.caption{font-size:13px; color:#666666; font-style:italic;padding-top:0;}
+.subDesc{color:#fff; font-size:12px;}
+.tinytxt{font-size:9px;}
+.smalltxt{font-size:11px;}
+.medium{font-size:12px;}
+.large{font-size:14px;}
+.boldtxt{font-weight:bold;}
+/* will need to either
+1. find a way to capture the width of the caption in the width of the image or flash
+2. Set some default widths, maybe use flickr widths?
+*/
+/* ====== media ====== */
+.media{overflow:hidden; overflow:visible; zoom:1;margin:10px;}
+.media .img{float:left;margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+
+.mediaExt{margin-right:0;}
+.mediaExt .img {margin-right:0; display:inline;}
+
+
+
+/*
+*
+*	@HACK
+*
+*	.media .imgGrd
+*
+*	added for IE6 to collapse margin from images within a media module.
+*	Needed for things like thumbnail grids to prevent the last item in 
+*	grid wrapping onto new line
+*
+*
+*/
+
+.media .imgGrd{_margin-right:0;}
+
+/* ====== special formatting classes ====== */
+.detail{color: #777; font-size:11px; display:block;}
+.artclImg{margin:20px 10px  0 10px; float:right;}
+.divider{margin-bottom:10px; padding-bottom:10px;}
+.noDec{text-decoration:none!important;}
+
+/*#stvPlayer{width:272px; height:162px;} /* mobile first */
+.vidWrap{min-height:156px; height:auto!important; height:156px; margin:10px;}
+
+@media (min-width: 600px){
+	#stvPlayer{width:576px; height:324px;}
+	.vidWrap{min-height:327px; height:auto!important; height:327px;}
+}
+
+/* override for IE 6/7/8 because they don't support media queries */
+
+.ie #stvPlayer{width:576px; height:324px;}
+.ie .vidWrap{width:576px; min-height:327px; height:auto!important; height:327px;}
+
+/* ====== ads ====== */
+#mpu-content, #leaderboard-content, .main_google_map {display:none;} /* mobile first */
+
+@media (min-width: 600px){
+	#mpu-content, #leaderboard-content{display:block;}
+	.mpu{height:250px; width:300px; margin:10px; display:block;}
+	.leaderboard{width:728px; height:90px; margin:10px 20px; display:block;}
+	.progHead{display:block;}
+	.main_google_map{display:block;}
+}
+
+/* override for IE 6/7/8 because they don't support media queries */
+.ie #leaderboard-content{display:block;}
+.ie #mpu-content{display:block;}
+.ie .mpu{height:250px; width:300px; margin:10px;}
+.ie .leaderboard{width:728px; height:90px; margin:10px 20px; display:block;}
+.ie .progHead{display:block;}
+.ie .main_google_map{display:block;}
+
+/* ====== utility classes ====== */
+.noPad{padding:0;}
+.noLPad{padding-left:0!important;}
+.noRPad{padding-right:0!important;}
+.noHPad{padding-left:0!important; padding-right:0!important;}
+.noVPad{padding-top:0!important; padding-bottom:0!important;}
+.noTPad{padding-top:0!important;}
+.noBPad{padding-bottom:0!important;}
+
+.padL{padding-left:10px!important;}
+.padR{padding-right:10px!important;}
+.padT{padding-top:10px!important;}
+.padB{padding-bottom:10px!important;}
+.padV{padding:10px 0!important;}
+.padH{padding:0 10px!important;}
+.pad{padding:10px;}
+
+
+.flL{float:left;}
+.flR{float:right;}
+.ctr{margin:0 auto;}
+.clrFix{overflow:hidden;}
+.mrgFix{padding-bottom:1px;}
+
+.hideTxt{text-indent:-999em; overflow:hidden;}
+.hideTxtR{text-indent:999em; overflow:hidden;}
+.hide{display:none;}
+.upC{text-transform:uppercase;}
+.clrR{clear:right;}
+.clrL{clear:left;}
+.flex{max-width:100%; width:100%; height:auto!important;}
+
+.js .nojs{display:none;}
+
+.inB {
+display: -moz-inline-box;
+display: inline-block;
+}
+* html .inB { display:inline; }  /* for IE 6 */
+* + html .inB { display:inline; }  /* for IE 7 */
+
+
+/* ====== main navigation ====== */
+.nav {padding:0; background-color:#ffed00;} /* mobile first */
+.nav a{padding-right:14px; padding-left:13px; display:block; font-size:100%; text-decoration:none; margin-right:1px; line-height:36px;}
+
+@media (min-width: 600px){
+	.nav .first{margin-left:130px;}
+}
+
+.ie .nav .first{margin-left:130px;}
+
+.nav li{position:relative; height:36px;}
+.nav li a{color:#000; font-weight:bold; text-transform:uppercase; height:36px;}
+
+.current{width:26px; height:13px; background:url(../../img/current_arrow.png) no-repeat; display:block; position:absolute; left:50%; margin-left:-13px;}
+
+.mainHeader{padding:20px 0;}
+
+.navProg{padding:0; font-size:125%; }
+
+
+/*
+
+.navGlobal{text-transform:uppercase; position:relative;}
+.navGlobal a{height:36px; line-height:36px; color:#fff;}
+
+.navGlobal li{width:10em; text-align:center;}
+
+.dropD ul {
+	position: absolute;
+	width: 80%;
+	left: 0;
+	background:#050505;
+	z-index:1000;
+	border:1px solid #40494D;
+	margin-top:37px;
+}
+
+.dropD:hover ul {
+	left: 0;
+}
+
+.tab{border:1px solid #40494D; background-color:#050505; border-bottom:1px solid #050505; position:absolute; z-index:1001;}
+.tabNext{margin-left:10em;}
+*/
+
+@media (min-width: 600px){
+	.navProg{overflow:hidden; height:36px; }
+	.nav li{float:left; display:inline;}
+}
+
+
+/* override for IE 6/7/8 because they don't support media queries */
+
+.ie .nav{overflow:hidden; height:36px; }
+.ie .nav li{float:left; display:inline;}
+
+/* ====== network banner ====== */
+.network{min-height:29px; height:auto !important; height:29px; padding-bottom:4px; background:transparent url(../../img/signin.bar.png) repeat-x bottom left;}
+.network .inner{margin:0 auto; text-align:left; color:#666; font-size:85%; }
+.bannerImg{margin-top:3px;}
+.welcome{font-weight:bold; text-align:right;}
+.welcome span{float:right;}
+.network a{color:#3676A1}
+.network a:active, .network a:hover, .network a:visited{color:#3676A1}
+#fbc-li{float:right; padding-left:10px; width:170px; display:inline; margin-top:-3px;}
+
+* .schedule{width:30%;} /* IE6 Hack  */
+
+
+/* ====== gallery ====== */
+.galImg{position:relative;}
+.loader{position:absolute; width:598px; height:338px; display:none;}
+
+/* ====== gallery main image loader ====== */
+.loader{background: url(../../img/spinner.gif) no-repeat center center;}
+
+@media (min-width: 600px){
+	.galImg img{width:598px; height:336px;}
+	.galImg .container{min-height:338px; height:auto!important; height:338px;}
+}
+
+/* override for IE 6/7/8 because they don't support media queries */
+	
+.ie .galImg img{width:598px; height:336px;}
+.ie .galImg .container{min-height:338px; height:auto!important; height:338px;}
+
+/* ====== next episode puff ====== */
+.nxtEp{height:146px;}
+.nxtEp h4{font-family:Arial, Helvetica, sans-serif; font-weight:bold; padding:30px 0 0 40px; text-transform:none;}
+.nxtEp p{padding: 5px 40px 0;}
+.leadPuff{width:200px; margin-right:10px; height:112px;} 
+.ie6 .leadPuff{margin-right:0;}
+.schedule{vertical-align:top; text-align:left;}
+
+
+/* ====== network share ====== */
+.js .shareBox {display:none;}
+.netShare li{margin-bottom:5px;}
+.netShare li a{padding-left:20px; background:url(../../img/social-cluster.png) no-repeat;}
+.netShare .digg{background-position:left -40px;}
+.netShare .stumbleupon{background-position:left -80px;}
+.netShare .google{background-position:left -120px;}
+.netShare .technorati{background-position:left -160px;}
+.netShare .newsvine{background-position:left -200px;}
+.netShare .furl{background-position:left -240px;}
+.netShare .reddit{background-position:left -270px;}
+
+.netShare .unit{*clear:left; float:none;}
+.js .netShare .unit{float:left;}
+
+/* ====== footer puffs ====== */ 
+
+.footTxt{width:220px; padding-right:0; max-width:none; position:relative;}
+
+.foot{background:#1e1f1f url(../../img/footer_bg.png) repeat-x top left; text-align:left; margin-top:20px;}
+.footLinks a{color:#ffffff!important;}
+.footHead{font-family:Arial, Helvetica, sans-serif; text-transform:none; color:#ffffff; line-height:30px;} /* footer 'Explore STV' */
+
+.puffTxtFoot { background-image:none!important;border-top:noe!important;}
+.puffTxtFoot p{color:#6dbcda; padding:10px 10px 0 0;}
+
+.defaultB{border:1px solid #40494d;}
+
+/* ====== img widths ====== */ 
+
+/*
+	*
+	* these are added to prevent the browser redraw because we omit the
+	* width and height declaration in the img tag to allow scalable image resizing
+	*
+*/
+@media (min-width: 600px){
+	.album_home img{width:598px; height:336px;}
+}
+
+.ie .album_home img{width:598px; height:336px;}
+
+.progHead{margin-top:10px;} /* creates a little bit of margin between start of program site and leaderboard/logo */
+.baseBgCol{background:transparent url(../../img/skins/default/headerbg.png) repeat-x bottom left;} /* background colour applied behind the leaderboard/logo */
+
+
+.msgWarning {
+background-color:#FFF5CC;
+border:2px solid #F2DD8C;
+}
+
+.msgInfo {
+background-color:#E8F6FF;
+border:2px solid #B8E2FB;
+}
+
+.msgDone {
+background-color:#EAF7D9;
+border:2px solid #BBDF8D;
+}
+
+.msgError {
+background-color:#FEEBEB;
+border:2px solid #FFAEAE;
+}
+
+	
+
+
+
+
